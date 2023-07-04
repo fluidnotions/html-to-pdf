@@ -13,6 +13,7 @@ Send a HTTP POST request with the body:
 
     {
       "content": "base64 encoded html content here",
+      "responseContentTypePdf" : false,
       "options": {
         "format": "A4",
         "margin": {
