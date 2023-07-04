@@ -130,7 +130,7 @@ async function bootstrap() {
   app.post("/", async (req, res) => {
     let body = await req.json();
     let buffer = await pdfBuilder.build(body);
-    res.setHeader("Content-Type", "application/pdf");
+    res.setHeader("Content-Type", "application/octet-stream");
     res.send(buffer);
   });
 
