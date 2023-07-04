@@ -25,5 +25,5 @@ ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/google-chrome-stable
 RUN corepack enable pnpm \
   && pnpm install --prod
 
-EXPOSE 3000
+EXPOSE 9001
 CMD ["node", "dist/index"]

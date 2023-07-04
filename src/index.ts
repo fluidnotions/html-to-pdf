@@ -105,7 +105,11 @@ const pdfCluster = await PDFCluster.launch();
 class PDFBuilder {
   async build(data: Input) {
     if (!data.content) "Content can't be empty";
-    let blob = await pdfCluster.execute(data);
+    const decodedString = Buffer.from(data.content, 'base64').toString('utf-8');
+    let blob = await pdfCluster.execute({
+      ...data,
+      content: decodedString,
+    });
     return blob;
   }
 }
