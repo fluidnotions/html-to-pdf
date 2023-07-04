@@ -134,7 +134,7 @@ async function bootstrap() {
     res.send(buffer);
   });
 
-  app.listen(tryParseInt(process.env.PORT) ?? 3000);
+  app.listen(tryParseInt(process.env.PORT) ?? 9001);
 
   console.log(`htmlToPdf is running at port:${app.port}`);
 }
