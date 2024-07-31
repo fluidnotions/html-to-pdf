@@ -1,14 +1,14 @@
-FROM node:20-alpine as builder
+FROM node:lts-alpine3.20 as builder
 RUN corepack enable pnpm
 WORKDIR /app
 COPY . .
 RUN pnpm install \
   && pnpm run build
 
-FROM --platform=linux/amd64 node:20-bullseye-slim AS deploy
+FROM --platform=linux/amd64 node:lts-bullseye-slim AS deploy
 
 WORKDIR /app
-
+ 
 RUN apt-get update \
     && apt-get install -y wget gnupg \
     && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \

@@ -15,15 +15,15 @@
   "author": "Farhan Syah",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.3.1",
-    "hyper-express": "^6.7.1",
-    "pino": "^8.14.1",
-    "puppeteer": "^20.7.2",
-    "puppeteer-cluster": "^0.23.0"
+    "dotenv": "^16.4.5",
+    "hyper-express": "^6.16.4",
+    "pino": "^9.3.2",
+    "puppeteer": "^22.15.0",
+    "puppeteer-cluster": "^0.24.0"
   },
   "devDependencies": {
-    "@types/node": "^20.3.1",
-    "esbuild": "^0.18.6",
-    "tsx": "^3.12.7"
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.23.0",
+    "tsx": "^4.16.3"
   }
 }
